@@ -8,15 +8,15 @@ build: requirements.txt
 	@$(VENV_PIP) install -r requirements.txt
 
 .PHONY: test
-test: build 
+test: build
 	@. venv/bin/activate && pytest -svk tests
 
 .PHONY: run
-run: build 
-	@$(VENV_PYTHON) main.py
+run: build
+	@$(VENV_PYTHON) -m scripts.main
 
 .PHONY: clean
-clean: 
+clean:
 	@rm -rf .pytest_cache
-	@rm -rf __pycache__
+	@rm -rf */__pycache__
 	@rm -rf $(VENV)
