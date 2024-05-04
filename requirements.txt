@@ -3,3 +3,5 @@ pytest
 pytest-html
 ./modules/example_module1
 ./modules/example_module2
+./modules/example_module_cpp
+# ./modules/mr_multiadversary_accel
